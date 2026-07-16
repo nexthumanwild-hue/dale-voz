@@ -1,8 +1,8 @@
 [package]
 name = "handy"
-version = "0.9.3"
-description = "Handy"
-authors = ["cjpais"]
+version = "1.0.0"
+description = "Dale Voz — dictado local para programar con IA"
+authors = ["Dale Voz contributors", "CJ Pais and Handy contributors"]
 edition = "2021"
 license = "MIT"
 default-run = "handy"

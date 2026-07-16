@@ -71,12 +71,12 @@ const getSupportedLanguage = (
   return supported ? supported.code : null;
 };
 
-// Initialize i18n with English as default
+// Dale Voz is built for Latin America: Spanish is the default product language.
 // Language will be synced from settings after init
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
-  fallbackLng: "en",
+  lng: "es",
+  fallbackLng: "es",
   interpolation: {
     escapeValue: false, // React already escapes values
   },

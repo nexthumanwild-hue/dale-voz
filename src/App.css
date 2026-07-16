@@ -11,10 +11,17 @@
   --color-logo-stroke: var(--color-logo-stroke);
   --color-text-stroke: var(--color-text-stroke);
   --color-mid-gray: var(--color-mid-gray);
+  --color-ink: var(--color-ink);
+  --color-bone: var(--color-bone);
+  --color-volt: var(--color-volt);
+  --color-coral: var(--color-coral);
+  --color-surface: var(--color-surface);
+  --color-surface-raised: var(--color-surface-raised);
 }
 
 :root {
   /* Typography */
+  font-family: var(--font-family-body);
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -41,6 +48,301 @@
   /* Apply colors */
   color: var(--color-text);
   background-color: var(--color-background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 720px;
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.app-shell,
+.onboarding-shell {
+  background-color: var(--color-background);
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--color-text) 3%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-text) 3%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 28px 28px;
+}
+
+.app-sidebar {
+  width: 194px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  padding: 18px 12px 14px;
+  background: var(--color-ink);
+  color: var(--color-bone);
+  border-right: 1px solid rgb(243 240 231 / 12%);
+}
+
+.app-sidebar-brand {
+  padding: 2px 6px 22px;
+}
+
+.dale-voz-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dale-voz-wordmark {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-display);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 0.83;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: currentColor;
+}
+
+.dale-voz-wordmark span:last-child {
+  color: var(--color-volt);
+}
+
+.local-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 5px 9px;
+  border: 1px solid rgb(243 240 231 / 16%);
+  border-radius: 999px;
+  color: rgb(243 240 231 / 68%);
+  font-family: var(--font-family-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.local-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-volt);
+  box-shadow: 0 0 0 3px rgb(200 255 61 / 12%);
+}
+
+.app-sidebar-label,
+.eyebrow {
+  font-family: var(--font-family-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.app-sidebar-label {
+  padding: 0 10px 8px;
+  color: rgb(243 240 231 / 38%);
+}
+
+.app-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-sidebar-item {
+  width: 100%;
+  min-height: 39px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  color: rgb(243 240 231 / 65%);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: left;
+  transition: all var(--duration-fast) var(--easing-default);
+}
+
+.app-sidebar-item:hover {
+  color: var(--color-bone);
+  background: rgb(243 240 231 / 7%);
+  transform: translateX(2px);
+}
+
+.app-sidebar-item-active {
+  color: var(--color-ink);
+  background: var(--color-volt);
+  border-color: var(--color-volt);
+  box-shadow: 3px 3px 0 var(--color-coral);
+}
+
+.app-sidebar-note {
+  margin-top: auto;
+  padding: 14px 10px 2px;
+  color: rgb(243 240 231 / 42%);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.app-main {
+  background: color-mix(in srgb, var(--color-background) 88%, transparent);
+}
+
+.app-main-header {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 26px 14px;
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.app-main-header .eyebrow {
+  color: var(--color-mid-gray);
+}
+
+.app-main-header h1 {
+  margin: 2px 0 0;
+  font-family: var(--font-family-display);
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.shortcut-hint {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-mid-gray);
+  font-family: var(--font-family-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.shortcut-hint kbd {
+  min-width: 25px;
+  padding: 5px 7px;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-primary);
+  border-bottom-width: 3px;
+  border-radius: 7px;
+  font-family: var(--font-family-mono);
+  font-size: 10px;
+  text-align: center;
+}
+
+.app-content {
+  padding: 24px 26px 38px;
+}
+
+.app-footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border-secondary);
+}
+
+.footer-separator {
+  color: var(--color-coral);
+  font-weight: 900;
+}
+
+/* Re-skin the existing functional settings vocabulary. */
+.bg-background.border.rounded-lg,
+.bg-background.border.border-mid-gray\/20.rounded-lg {
+  background: var(--color-surface);
+  border-color: var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-content h2.uppercase {
+  color: var(--color-mid-gray);
+  font-family: var(--font-family-mono);
+  letter-spacing: 0.12em;
+}
+
+.eyebrow {
+  color: var(--color-coral);
+}
+
+@media (max-width: 820px) {
+  .app-sidebar {
+    width: 72px;
+    align-items: center;
+    padding-inline: 9px;
+  }
+
+  .app-sidebar-brand .dale-voz-wordmark,
+  .app-sidebar-label,
+  .app-sidebar-item p,
+  .app-sidebar-note,
+  .local-status span:not(.local-status-dot) {
+    display: none;
+  }
+
+  .app-sidebar-brand {
+    padding-inline: 0;
+  }
+
+  .dale-voz-logo {
+    width: 38px !important;
+  }
+
+  .local-status {
+    padding: 6px;
+    justify-content: center;
+  }
+
+  .app-sidebar-item {
+    justify-content: center;
+    padding: 9px;
+  }
+
+  .shortcut-hint span {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .container {

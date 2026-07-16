@@ -1,37 +1,114 @@
-/* Handy Colors */
+/* Dale Voz — Terminal Tropical design tokens */
 
 :root {
-  /* Palette source of truth. Each themed color is defined once as a
-     light/dark pair; the active tokens below and the `data-theme` overrides
-     in App.css reference these, so a hex value lives in exactly one place. */
-  --light-color-text: #0f0f0f;
-  --light-color-background: #fbfbfb;
-  --light-color-logo-primary: #faa2ca;
-  --light-color-logo-stroke: #382731;
+  color-scheme: light;
 
-  --dark-color-text: #fbfbfb;
-  --dark-color-background: #2c2b29;
-  --dark-color-logo-primary: #f28cbb;
-  --dark-color-logo-stroke: #fad1ed;
+  --color-ink: #11110f;
+  --color-bone: #f3f0e7;
+  --color-volt: #c8ff3d;
+  --color-coral: #ff5b4d;
+  --color-cement: #aaa89f;
 
-  /* Tokens that do not change between light and dark */
-  --color-background-ui: #da5893;
-  --color-text-stroke: #f6f6f6;
-  --color-mid-gray: #808080;
+  --light-color-text: #181816;
+  --light-color-background: #f3f0e7;
+  --light-color-surface: #fffdf6;
+  --light-color-surface-raised: #ffffff;
+  --light-color-logo-primary: #11110f;
+  --light-color-logo-stroke: #11110f;
 
-  /* Active palette — defaults to light, follows the OS via the media query
-     below, or is forced by `data-theme` (see App.css). */
+  --dark-color-text: #f3f0e7;
+  --dark-color-background: #11110f;
+  --dark-color-surface: #1b1b18;
+  --dark-color-surface-raised: #24241f;
+  --dark-color-logo-primary: #c8ff3d;
+  --dark-color-logo-stroke: #f3f0e7;
+
   --color-text: var(--light-color-text);
   --color-background: var(--light-color-background);
+  --color-surface: var(--light-color-surface);
+  --color-surface-raised: var(--light-color-surface-raised);
+  --color-background-ui: #11110f;
   --color-logo-primary: var(--light-color-logo-primary);
   --color-logo-stroke: var(--light-color-logo-stroke);
+  --color-text-stroke: #f3f0e7;
+  --color-mid-gray: #737168;
+
+  --color-border-primary: color-mix(
+    in srgb,
+    var(--color-text) 18%,
+    transparent
+  );
+  --color-border-secondary: color-mix(
+    in srgb,
+    var(--color-text) 10%,
+    transparent
+  );
+  --color-border-focus: var(--color-volt);
+  --color-status-success: #49b872;
+  --color-status-warning: #f1b53b;
+  --color-status-error: var(--color-coral);
+  --color-status-info: #4e8cff;
+  --color-surface-overlay: rgb(17 17 15 / 72%);
+
+  --font-family-display: "Arial Black", "Avenir Next Condensed", sans-serif;
+  --font-family-body: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --font-family-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --space-0: 0;
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 12px;
+  --space-6: 16px;
+  --space-7: 24px;
+  --space-8: 32px;
+  --space-9: 48px;
+  --space-10: 64px;
+
+  --radius-sm: 7px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --shadow-sm: 0 1px 0 rgb(17 17 15 / 10%);
+  --shadow-md: 0 12px 30px rgb(17 17 15 / 10%);
+  --shadow-focus: 0 0 0 3px rgb(200 255 61 / 45%);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 420ms;
+  --easing-default: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-text: var(--dark-color-text);
+  --color-background: var(--dark-color-background);
+  --color-surface: var(--dark-color-surface);
+  --color-surface-raised: var(--dark-color-surface-raised);
+  --color-background-ui: var(--color-volt);
+  --color-logo-primary: var(--dark-color-logo-primary);
+  --color-logo-stroke: var(--dark-color-logo-stroke);
+  --color-text-stroke: #11110f;
+  --color-mid-gray: #aaa89f;
+  --shadow-sm: 0 1px 0 rgb(0 0 0 / 35%);
+  --shadow-md: 0 16px 40px rgb(0 0 0 / 35%);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --color-text: var(--dark-color-text);
     --color-background: var(--dark-color-background);
+    --color-surface: var(--dark-color-surface);
+    --color-surface-raised: var(--dark-color-surface-raised);
+    --color-background-ui: var(--color-volt);
     --color-logo-primary: var(--dark-color-logo-primary);
     --color-logo-stroke: var(--dark-color-logo-stroke);
+    --color-text-stroke: #11110f;
+    --color-mid-gray: #aaa89f;
+    --shadow-sm: 0 1px 0 rgb(0 0 0 / 35%);
+    --shadow-md: 0 16px 40px rgb(0 0 0 / 35%);
   }
 }

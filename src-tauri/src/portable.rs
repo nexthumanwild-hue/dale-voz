@@ -27,7 +27,7 @@ pub fn init() {
             // empty/invalid marker alongside an existing Data/ dir, this is a
             // real portable install — upgrade the marker in place.
             eprintln!("[portable] upgrading legacy empty marker to magic string");
-            let _ = std::fs::write(&marker_path, "Handy Portable Mode");
+            let _ = std::fs::write(&marker_path, "Dale Voz Portable Mode");
             true
         } else {
             false
@@ -95,7 +95,10 @@ pub fn store_path(relative: &str) -> PathBuf {
 /// Extracted for testability.
 fn is_valid_portable_marker(path: &std::path::Path) -> bool {
     std::fs::read_to_string(path)
-        .map(|s| s.trim().starts_with("Handy Portable Mode"))
+        .map(|s| {
+            let marker = s.trim();
+            marker.starts_with("Dale Voz Portable Mode") || marker.starts_with("Handy Portable Mode")
+        })
         .unwrap_or(false)
 }
 

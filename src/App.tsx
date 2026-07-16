@@ -288,24 +288,38 @@ function App() {
     content = (
       <div
         dir={direction}
-        className="h-screen flex flex-col select-none cursor-default"
+        className="app-shell h-screen flex flex-col select-none cursor-default"
       >
         <WhatsNewGate />
         {/* Main content area that takes remaining space */}
-        <div className="flex-1 flex overflow-hidden">
+        <div className="flex-1 flex overflow-hidden min-h-0">
           <Sidebar
             activeSection={currentSection}
             onSectionChange={setCurrentSection}
           />
           {/* Scrollable content area */}
-          <div className="flex-1 flex flex-col overflow-hidden">
+          <main className="app-main flex-1 flex flex-col overflow-hidden">
+            <header className="app-main-header">
+              <div>
+                <span className="eyebrow">{t("brand.commandCenter")}</span>
+                <h1>{t(SECTIONS_CONFIG[currentSection].labelKey)}</h1>
+              </div>
+              <div
+                className="shortcut-hint"
+                aria-label={t("brand.shortcutHint")}
+              >
+                <span>{t("brand.shortcutHint")}</span>
+                <kbd>{t("brand.keyOption")}</kbd>
+                <kbd>{t("brand.keySpace")}</kbd>
+              </div>
+            </header>
             <div className="flex-1 overflow-y-auto">
-              <div className="flex flex-col items-center p-4 gap-4">
+              <div className="app-content flex flex-col items-center p-4 gap-4">
                 <AccessibilityPermissions />
                 {renderSettingsContent(currentSection)}
               </div>
             </div>
-          </div>
+          </main>
         </div>
         {/* Fixed footer at bottom */}
         <Footer />

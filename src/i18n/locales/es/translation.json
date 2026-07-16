@@ -17,12 +17,24 @@
     "debug": "Depuración",
     "about": "Acerca de"
   },
+  "brand": {
+    "nameFirst": "Dale",
+    "nameSecond": "Voz",
+    "localStatus": "Local / listo",
+    "workspace": "Centro de mando",
+    "privacyNote": "Tu voz se procesa aquí. Nada sale de tu compu.",
+    "commandCenter": "Dale Voz / ajustes",
+    "shortcutHint": "Habla con",
+    "onboardingEyebrow": "Primero, afina el motor",
+    "keyOption": "⌥",
+    "keySpace": "Espacio"
+  },
   "onboarding": {
-    "subtitle": "Para comenzar, elige un modelo de transcripción",
-    "existingModelsTitle": "Compatible Models",
-    "downloadModelsTitle": "Available to Download",
-    "showAllModels": "Show all {{total}} models",
-    "showFewerModels": "Show fewer models",
+    "subtitle": "Elige el motor que convertirá tu voz en prompts, todo desde tu compu.",
+    "existingModelsTitle": "Ya instalados",
+    "downloadModelsTitle": "Listos para descargar",
+    "showAllModels": "Ver los {{total}} modelos",
+    "showFewerModels": "Ver menos modelos",
     "recommended": "Recomendado",
     "customModelDescription": "Sin soporte oficial",
     "modelCard": {
@@ -96,23 +108,23 @@
       }
     },
     "errors": {
-      "selectModel": "Failed to select model"
+      "selectModel": "No pudimos activar ese modelo"
     },
     "permissions": {
-      "title": "Permisos Requeridos",
-      "description": "Handy necesita algunos permisos para funcionar correctamente.",
+      "title": "Dos permisos y arrancamos",
+      "description": "Dale Voz necesita escuchar y pegar el texto donde estés trabajando.",
       "microphone": {
-        "title": "Acceso al Micrófono",
-        "description": "Necesario para escuchar tu voz para la transcripción."
+        "title": "Micrófono",
+        "description": "Para escuchar tu voz mientras mantienes el atajo."
       },
       "accessibility": {
-        "title": "Acceso de Accesibilidad",
-        "description": "Necesario para escribir el texto transcrito en tus aplicaciones."
+        "title": "Accesibilidad",
+        "description": "Para pegar el prompt en Cursor, Claude, la terminal o cualquier app."
       },
-      "grant": "Conceder Permiso",
-      "granted": "Concedido",
-      "waiting": "Esperando...",
-      "allGranted": "¡Todo listo!",
+      "grant": "Dar acceso",
+      "granted": "Listo",
+      "waiting": "Esperando…",
+      "allGranted": "Listo. Ahora sí, dale voz.",
       "errors": {
         "checkFailed": "Error al verificar permisos. Por favor, inténtalo de nuevo.",
         "requestFailed": "Error al solicitar permiso. Por favor, inténtalo de nuevo."
@@ -172,14 +184,14 @@
       "searchPlaceholder": "Buscar modelos por nombre…",
       "rescan": {
         "label": "Volver a escanear",
-        "tooltip": "Vuelve a escanear en busca de modelos añadidos a la carpeta de modelos o a la caché de Hugging Face fuera de Handy"
+        "tooltip": "Busca modelos añadidos manualmente a la carpeta local o a la caché de Hugging Face"
       }
     },
     "general": {
       "title": "General",
       "shortcut": {
-        "title": "Atajos de Handy",
-        "description": "Configura atajos de teclado para activar la grabación de voz a texto",
+        "title": "Atajos de Dale Voz",
+        "description": "Elige la combinación que activa tu voz sin sacarte del flow",
         "loading": "Cargando atajos...",
         "none": "No hay atajos configurados",
         "notFound": "Atajo no encontrado",
@@ -274,11 +286,11 @@
       },
       "autostart": {
         "label": "Iniciar al Arranque",
-        "description": "Iniciar Handy automáticamente cuando inicies sesión en tu computadora."
+        "description": "Iniciar Dale Voz automáticamente cuando prendas tu compu."
       },
       "showTrayIcon": {
         "label": "Mostrar Icono de Bandeja",
-        "description": "Mostrar el icono de Handy en la bandeja del sistema."
+        "description": "Mostrar el icono de Dale Voz en la bandeja del sistema."
       },
       "overlay": {
         "style": {
@@ -461,7 +473,7 @@
       },
       "updateChecks": {
         "label": "Buscar Actualizaciones",
-        "description": "Buscar automáticamente nuevas versiones de Handy"
+        "description": "Buscar automáticamente nuevas versiones de Dale Voz"
       },
       "soundTheme": {
         "label": "Tema de Sonido",
@@ -540,11 +552,11 @@
       "title": "Acerca de",
       "version": {
         "title": "Versión",
-        "description": "Versión actual de Handy"
+        "description": "Versión actual de Dale Voz"
       },
       "appDataDirectory": {
         "title": "Directorio de Datos de la Aplicación",
-        "description": "Ubicación donde Handy almacena sus datos"
+        "description": "Ubicación donde Dale Voz guarda sus datos locales"
       },
       "sourceCode": {
         "title": "Código Fuente",
@@ -552,21 +564,21 @@
         "button": "Ver en GitHub"
       },
       "supportDevelopment": {
-        "title": "Apoyar el Desarrollo",
-        "description": "Ayúdanos a continuar construyendo Handy",
-        "button": "Donar"
+        "title": "Proyecto Open Source",
+        "description": "Mira el roadmap, reporta errores o aporta al código",
+        "button": "Abrir repositorio"
       },
       "acknowledgments": {
         "title": "Reconocimientos",
         "ggml": {
           "title": "ggml",
           "description": "Inferencia de alto rendimiento del modelo de reconocimiento automático de voz Whisper de OpenAI",
-          "details": "Handy usa ggml para procesamiento de voz a texto rápido y local. Gracias al increíble trabajo de Georgi Gerganov y colaboradores."
+          "details": "Dale Voz usa transcribe.cpp y ggml para convertir voz a texto de forma rápida y local. Gracias a Georgi Gerganov, CJ Pais y toda la comunidad open source."
         }
       },
       "whatsNewUpdates": {
         "label": "Mostrar novedades",
-        "description": "Mostrar notas de la versión después de las actualizaciones de Handy"
+        "description": "Mostrar las novedades después de actualizar Dale Voz"
       }
     }
   },
@@ -585,6 +597,8 @@
   },
   "common": {
     "loading": "Cargando...",
+    "downloading": "Descargando…",
+    "downloadingCount": "Descargando {{count}} modelos…",
     "delete": "Eliminar",
     "close": "Cerrar",
     "open": "Abrir",
@@ -593,7 +607,7 @@
     "noOptionsFound": "No se encontraron opciones"
   },
   "accessibility": {
-    "permissionsDescription": "Handy necesita permisos de accesibilidad para escribir texto transcrito.",
+    "permissionsDescription": "Dale Voz necesita accesibilidad para pegar lo que dictas.",
     "openSettings": "Abrir Ajustes del Sistema"
   },
   "errors": {
@@ -616,11 +630,11 @@
   },
   "appLanguage": {
     "title": "Idioma de la aplicación",
-    "description": "Cambia el idioma de la interfaz de Handy"
+    "description": "Cambia el idioma de la interfaz de Dale Voz"
   },
   "theme": {
     "title": "Tema de la aplicación",
-    "description": "Elige si Handy sigue el tema del sistema o permanece claro u oscuro",
+    "description": "Elige si Dale Voz sigue el tema del sistema o usa modo claro u oscuro",
     "options": {
       "system": "Sistema",
       "light": "Claro",
@@ -632,6 +646,6 @@
     "processing": "Procesando..."
   },
   "whatsNew": {
-    "title": "Nuevo en Handy v{{version}}"
+    "title": "Nuevo en Dale Voz v{{version}}"
   }
 }

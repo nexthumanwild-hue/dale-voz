@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11110f" />
+    <meta
+      name="description"
+      content="Dale Voz convierte tu voz en prompts y texto dentro de Cursor, Claude, la terminal o cualquier app. Gratis, open source y 100% local."
+    />
+    <meta
+      property="og:title"
+      content="Dale Voz — Habla el prompt. Que corra el código."
+    />
+    <meta
+      property="og:description"
+      content="Dictado local hecho para vibe coders de Latinoamérica."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/logo-mark.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Dale Voz — Dicta prompts. Sigue en flow.</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Dale Voz, inicio">
+        <img src="/logo-mark.svg" alt="" width="42" height="42" />
+        <span class="brand-name"><span>Dale</span><span>Voz</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#por-que">Por qué</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="button button-small button-dark" href="#descargar"
+        >Descargar gratis <span aria-hidden="true">↓</span></a
+      >
+    </header>
+
+    <main id="principal">
+      <section class="hero" id="top">
+        <div class="hero-copy reveal">
+          <div class="signal"><span></span> Open source · 100% local</div>
+          <h1>Habla el prompt.<br /><em>Que corra el código.</em></h1>
+          <p class="hero-lede">
+            Dicta en Cursor, Claude, la terminal o donde sea. Mantén un atajo,
+            habla y suelta. Dale Voz escribe por ti sin mandar tu voz a la nube.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-volt primary-download" href="#descargar"
+              >Descargar para <span data-platform-name>tu compu</span>
+              <span aria-hidden="true">↘</span></a
+            >
+            <a class="text-link" href="#como-funciona"
+              >Ver cómo funciona <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <div class="trust-row">
+            <span>Sin cuenta</span><i></i><span>Sin mensualidad</span><i></i
+            ><span>Mac · Windows · Linux</span>
+          </div>
+        </div>
+
+        <div
+          class="hero-visual reveal reveal-late"
+          aria-label="Vista previa de Dale Voz funcionando sobre un editor de código"
+        >
+          <div class="scribble scribble-one">habla aquí</div>
+          <div class="app-window">
+            <div class="window-bar">
+              <div class="traffic"><span></span><span></span><span></span></div>
+              <span class="window-title">dale-voz / ajustes</span>
+              <span class="local-pill"><b></b> local</span>
+            </div>
+            <div class="window-body">
+              <aside class="mock-sidebar">
+                <div class="mini-brand">
+                  <img src="/logo-mark.svg" alt="" /><strong
+                    >Dale<br /><b>Voz</b></strong
+                  >
+                </div>
+                <span class="side-label">Centro de mando</span>
+                <div class="side-item active">⌁ <span>General</span></div>
+                <div class="side-item">◫ <span>Modelos</span></div>
+                <div class="side-item">⌘ <span>Avanzado</span></div>
+                <div class="side-item">↶ <span>Historial</span></div>
+                <p>Tu voz no sale<br />de tu compu.</p>
+              </aside>
+              <div class="mock-content">
+                <span class="overline">Dale Voz / ajustes</span>
+                <h2>General</h2>
+                <div class="setting-group">
+                  <span class="group-label">Atajo principal</span>
+                  <div class="setting">
+                    <div>
+                      <strong>Hablar</strong
+                      ><small>Mantén, dicta y suelta</small>
+                    </div>
+                    <div class="keys"><kbd>⌥</kbd><kbd>Space</kbd></div>
+                  </div>
+                  <div class="setting">
+                    <div>
+                      <strong>Presionar para hablar</strong
+                      ><small>Sin clics, sin cambiar de ventana</small>
+                    </div>
+                    <span class="toggle"></span>
+                  </div>
+                </div>
+                <div class="setting-group second-group">
+                  <span class="group-label">Idioma</span>
+                  <div class="setting">
+                    <div>
+                      <strong>Español</strong
+                      ><small>Detecta acentos y código mezclado</small>
+                    </div>
+                    <span class="select-pill">Automático⌄</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="voice-overlay">
+            <span class="rec-dot"></span>
+            <div class="wave">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span>00:08</span>
+            <button aria-label="Cancelar grabación">×</button>
+          </div>
+          <div class="speech-chip">
+            “Refactoriza este hook y explícame el trade-off…”<span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Compatible con tus herramientas">
+        <div>
+          <span>CURSOR</span><b>✦</b><span>CLAUDE</span><b>✦</b
+          ><span>TERMINAL</span><b>✦</b><span>VS CODE</span><b>✦</b
+          ><span>CHATGPT</span><b>✦</b><span>DONDE ESCRIBAS</span><b>✦</b>
+        </div>
+      </section>
+
+      <section class="why section" id="por-que">
+        <div class="section-heading">
+          <span class="kicker">01 / Por qué Dale Voz</span>
+          <h2>Tu cabeza va rápido.<br />Tus dedos no siempre.</h2>
+          <p>
+            Cuando el prompt es largo, escribirlo rompe la idea. Dale Voz te
+            deja pensar hablando y seguir construyendo.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card card-dark">
+            <span class="feature-icon">›_</span>
+            <span class="card-number">01</span>
+            <h3>Funciona donde ya trabajas</h3>
+            <p>
+              No abre otro chat ni inventa otro flujo. El texto aparece en la
+              app que tienes activa.
+            </p>
+            <div class="mini-apps">
+              <span>C</span><span>AI</span><span>_</span><span>+</span>
+            </div>
+          </article>
+          <article class="feature-card card-coral">
+            <span class="feature-icon">◉</span>
+            <span class="card-number">02</span>
+            <h3>Tu voz se queda contigo</h3>
+            <p>
+              La transcripción corre en tu equipo. Sin cuenta, sin subir audios,
+              sin entrenar a nadie con tus ideas.
+            </p>
+            <div class="privacy-line"><span></span> PROCESANDO LOCALMENTE</div>
+          </article>
+          <article class="feature-card card-bone">
+            <span class="feature-icon">{ }</span>
+            <span class="card-number">03</span>
+            <h3>Entiende código, contexto y español</h3>
+            <p>
+              Dicta nombres de funciones, tickets, comentarios o prompts largos.
+              Luego pule el resultado con tu modelo favorito.
+            </p>
+            <code>crear función → createFunction()</code>
+          </article>
+        </div>
+      </section>
+
+      <section class="steps section" id="como-funciona">
+        <div class="steps-intro">
+          <span class="kicker kicker-light">02 / Tres pasos</span>
+          <h2>Menos ritual.<br /><em>Más flow.</em></h2>
+        </div>
+        <ol class="steps-list">
+          <li>
+            <span class="step-number">01</span>
+            <div>
+              <h3>Mantén el atajo</h3>
+              <p>Usa el que viene listo o configura el tuyo.</p>
+            </div>
+            <div class="keys keys-dark"><kbd>⌥</kbd><kbd>Space</kbd></div>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <div>
+              <h3>Habla como piensas</h3>
+              <p>Con pausas, cambios y palabras técnicas. Dale Voz escucha.</p>
+            </div>
+            <div class="step-wave"><i></i><i></i><i></i><i></i><i></i></div>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <div>
+              <h3>Suelta. Ya está escrito.</h3>
+              <p>El texto cae justo donde tenías el cursor.</p>
+            </div>
+            <div class="done-mark">✓</div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="download section" id="descargar">
+        <div class="download-panel">
+          <div class="download-copy">
+            <span class="kicker">03 / Descarga</span>
+            <h2>Prueba Dale Voz.<br /><em>Es gratis de verdad.</em></h2>
+            <p>
+              Open source, sin cuenta y sin límites por minuto. Elige tu sistema
+              y vuelve a tu código.
+            </p>
+            <a
+              class="button button-dark primary-download download-cta"
+              href="#"
+              data-download-primary
+              >Descargar para <span data-platform-name>tu compu</span>
+              <span aria-hidden="true">↓</span></a
+            >
+            <small>Dale Voz v1.0.0 · Basado en Handy · MIT</small>
+          </div>
+          <div class="platform-list" aria-label="Descargas por plataforma">
+            <a href="#" data-download="mac"
+              ><span class="platform-icon">⌘</span
+              ><span
+                ><strong>macOS</strong
+                ><small>Apple Silicon e Intel</small></span
+              ><b>↗</b></a
+            >
+            <a href="#" data-download="windows"
+              ><span class="platform-icon">⊞</span
+              ><span
+                ><strong>Windows</strong><small>Windows 10 y 11</small></span
+              ><b>↗</b></a
+            >
+            <a href="#" data-download="linux"
+              ><span class="platform-icon">λ</span
+              ><span
+                ><strong>Linux</strong><small>AppImage, deb y rpm</small></span
+              ><b>↗</b></a
+            >
+            <a href="#" data-download="source"
+              ><span class="platform-icon">&lt;/&gt;</span
+              ><span
+                ><strong>Código fuente</strong
+                ><small>Haz fork y rómpelo bonito</small></span
+              ><b>↗</b></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" id="preguntas">
+        <div class="section-heading faq-heading">
+          <span class="kicker">04 / Sin letra chica</span>
+          <h2>Preguntas que sí importan.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>¿Mi voz se sube a internet?<span>+</span></summary>
+            <p>
+              No. La transcripción ocurre localmente con un modelo que descargas
+              a tu equipo. La voz no se envía a nuestros servidores porque no
+              tenemos servidores para procesarla.
+            </p>
+          </details>
+          <details>
+            <summary>
+              ¿Funciona con Cursor, Claude y la terminal?<span>+</span>
+            </summary>
+            <p>
+              Sí. Dale Voz pega el texto en el campo activo del sistema, así que
+              funciona en editores, navegadores, chats, terminales y
+              prácticamente cualquier lugar donde puedas escribir.
+            </p>
+          </details>
+          <details>
+            <summary>¿De verdad es gratis?<span>+</span></summary>
+            <p>
+              Sí. El código tiene licencia MIT. No hay cuenta, suscripción ni
+              límite de minutos. Tu equipo pone el cómputo.
+            </p>
+          </details>
+          <details>
+            <summary>¿Qué relación tiene con Handy?<span>+</span></summary>
+            <p>
+              Dale Voz es un fork independiente basado en el excelente proyecto
+              open source Handy de CJ Pais y su comunidad. Conserva la licencia
+              y atribución, pero usa identidad y dirección propias.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="/logo-mark.svg" alt="" /><span class="brand-name"
+          ><span>Dale</span><span>Voz</span></span
+        >
+      </div>
+      <p>
+        Hecho para quienes piensan en voz alta<br />y hacen deploy antes del
+        café.
+      </p>
+      <div class="footer-links">
+        <a href="#top">Arriba ↑</a
+        ><a
+          href="https://github.com/cjpais/Handy"
+          target="_blank"
+          rel="noreferrer"
+          >Origen: Handy ↗</a
+        ><a href="#preguntas">Privacidad</a>
+      </div>
+      <small
+        >Fork independiente. Handy y su marca pertenecen a sus respectivos
+        titulares.</small
+      >
+    </footer>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
