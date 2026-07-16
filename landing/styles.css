@@ -871,6 +871,16 @@ summary:focus-visible {
   background: var(--bone);
   transform: translateX(3px);
 }
+
+.platform-list a.platform-unavailable {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.platform-list a.platform-unavailable:hover {
+  background: transparent;
+  color: inherit;
+}
 .platform-list a.recommended-platform::after {
   content: "Tu sistema";
   position: absolute;

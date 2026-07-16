@@ -97,7 +97,8 @@ fn is_valid_portable_marker(path: &std::path::Path) -> bool {
     std::fs::read_to_string(path)
         .map(|s| {
             let marker = s.trim();
-            marker.starts_with("Dale Voz Portable Mode") || marker.starts_with("Handy Portable Mode")
+            marker.starts_with("Dale Voz Portable Mode")
+                || marker.starts_with("Handy Portable Mode")
         })
         .unwrap_or(false)
 }

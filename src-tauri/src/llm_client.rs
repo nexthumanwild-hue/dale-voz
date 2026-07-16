@@ -71,9 +71,7 @@ fn build_headers(provider: &PostProcessProvider, api_key: &str) -> Result<Header
     );
     headers.insert(
         USER_AGENT,
-        HeaderValue::from_static(
-            "DaleVoz/1.0 (+https://github.com/nexthumanwild-hue/dale-voz)",
-        ),
+        HeaderValue::from_static("DaleVoz/1.0 (+https://github.com/nexthumanwild-hue/dale-voz)"),
     );
     headers.insert("X-Title", HeaderValue::from_static("Dale Voz"));
 

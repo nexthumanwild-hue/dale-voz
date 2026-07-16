@@ -22,14 +22,22 @@ document.querySelectorAll("[data-platform-name]").forEach((node) => {
 
 document.querySelectorAll("[data-download]").forEach((link) => {
   const target = link.dataset.download;
-  link.href = downloads[target] || downloads.source || "#";
+  const url = downloads[target];
+  if (!url) {
+    link.removeAttribute("href");
+    link.removeAttribute("target");
+    link.setAttribute("aria-disabled", "true");
+    link.classList.add("platform-unavailable");
+    return;
+  }
+  link.href = url;
   link.target = "_blank";
   link.rel = "noreferrer";
   if (target === platform) link.classList.add("recommended-platform");
 });
 
 document.querySelectorAll("[data-download-primary]").forEach((link) => {
-  link.href = downloads[platform] || downloads.source || "#";
+  link.href = downloads[platform] || downloads.mac || downloads.source || "#";
   link.target = "_blank";
   link.rel = "noreferrer";
 });
